@@ -1059,6 +1059,25 @@ namespace JsonBox {
 		}
 	}
 
+	Value::operator int() const {
+		return getInt();
+	}
+	Value::operator double() const {
+		return getDouble();
+	}
+	Value::operator Object() const {
+		return getObject();
+	}
+	Value::operator Array() const {
+		return getArray();
+	}
+	Value::operator std::string() const {
+		return getString();
+	}
+	Value::operator bool() const {
+		return getBoolean();
+	}
+
 	std::ostream &operator<<(std::ostream &output, const Value &v) {
 		switch (v.type) {
 		case Value::STRING:

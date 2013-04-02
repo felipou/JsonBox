@@ -427,6 +427,14 @@ namespace JsonBox {
 		 */
 		void writeToFile(const std::string &filePath, bool indent = true,
 		                 bool escapeAll = false) const;
+
+		operator int() const;
+		operator double() const;
+		operator Object() const;
+		operator Array() const;
+		operator std::string() const;
+		operator bool() const;
+
 	private:
 		/**
 		 * Union used to contain the pointer to the value's data.
